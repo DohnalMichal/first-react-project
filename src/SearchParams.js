@@ -14,7 +14,7 @@ const SearchParams = () => {
     const { animals } = await pet.animals({
       location,
       breed,
-      type: animal,
+      type: animal
     });
 
     console.log("animals", animals);
@@ -30,7 +30,7 @@ const SearchParams = () => {
       const breedStrings = breeds.map(({ name }) => name);
       setBreeds(breedStrings);
     }, console.error);
-  }, [animal]);
+  }, [animal, setBreed]);
 
   return (
     <div className="search-params">
