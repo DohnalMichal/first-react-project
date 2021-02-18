@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
-import Pet from "./Pet";
+import ReactDOM from "react-dom";
 import SearchParams from "./SearchParams";
+import "regenerator-runtime/runtime";
 
 const App = () => {
   return (
@@ -15,4 +15,4 @@ const App = () => {
   );
 };
 
-render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -2,9 +2,12 @@
   "name": "first-react-project",
   "version": "1.0.0",
   "description": "My first React project",
-  "main": "index.js",
+  "main": "src/App.jsx",
   "scripts": {
+    "clear-build-cache": "rm -rf .cache/ dist/",
+    "del": "rm -rf node_modules",
     "dev": "parcel src/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +15,10 @@
   "author": "Michal Dohnal",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-react": "^7.12.13",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
@@ -26,5 +33,8 @@
     "@frontendmasters/pet": "^1.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  }
+  },
+  "browserlist": [
+    "last 2 Chrome versions"
+  ]
 }
