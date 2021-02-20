@@ -23,8 +23,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <h1>
-          There was an errpr with this listing. <Link to="/">Click here</Link>
-          to go back to the home page or wait five seconds
+          There was an error with this listing. <Link to="/">Click here</Link>
+          &nbsp;to go back to the home page or wait five seconds
         </h1>
       );
     }
