@@ -10,7 +10,8 @@
     "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js,tsx,html}\" --write",
     "lint": "tslint --project",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit"
   },
   "author": "Michal Dohnal",
   "license": "ISC",
