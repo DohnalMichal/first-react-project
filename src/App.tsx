@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { Link, Router } from "@reach/router";
 import SearchParams from "./SearchParams";
+import { Provider } from "react-redux";
 import Details from "./Details";
-import ThemeContext from "./ThemeContext";
+import store from "./store";
 import "regenerator-runtime/runtime"; // This needs to be here for async await to work
 
 const App = () => {
-  const themeHook = useState("darkblue");
   return (
     <React.StrictMode>
-      <ThemeContext.Provider value={themeHook}>
+      <Provider store={store}>
         <div>
           <header>
             <Link to="/">Adopt Me!</Link>
@@ -20,7 +20,7 @@ const App = () => {
             <Details path="/details/:id" />
           </Router>
         </div>
-      </ThemeContext.Provider>
+      </Provider>
     </React.StrictMode>
   );
 };
