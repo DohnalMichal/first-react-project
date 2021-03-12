@@ -10,7 +10,7 @@
     "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js,tsx,html}\" --write",
     "lint": "tslint --project",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "typecheck": "tsc --noEmit"
   },
   "author": "Michal Dohnal",
@@ -46,7 +46,7 @@
     "redux": "^4.0.5",
     "typescript": "^4.2.2"
   },
-  "browserlist": [
+  "browserslist": [
     "last 2 Chrome versions"
   ]
 }
